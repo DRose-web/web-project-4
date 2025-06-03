@@ -1,0 +1,321 @@
+<!--Name: Dana
+    Course: web dev 10s
+    Teacher: ms.Hoitink
+    School: Pembina Trails Colligate
+    Date Last Modified: may 28 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Naawi-Oodena</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <style>
+        /* here is where i created my gri container which you dont really see on the final look of the website but it is there to set the grid up properly. first i gave it a display
+        of grid so that way it shows up then i used a prefix to make it accessable on an older browser that doesnt support it. I then added the grid template making 11 rows and 20 columns
+        and used the appropriate prefix for that too. then i just addedd padding to leave some null space between  the edge of the screen and the content each row and column took one respective 
+        spaces which means that it determines the amoount of space it has and take one even part rather than however much it feels like */
+    .grid-container {
+        display: grid;
+        display:-ms-grid;
+        grid-template-columns: repeat(11, 1fr); 
+        -ms-grid-template-columns: repeat(11, 1fr); 
+        grid-template-rows: repeat(20, 1fr);   
+        -ms-grid-template-rows: repeat(20, 1fr); 
+        padding: 10px;
+        }
+        /* here i styled my first grid item I thought this layout was fun and modern looking which also not grabbing the attention form the actual site. i made the background color orange
+        and the border around it solid 5px and purple which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes */
+    .grid-item1 {
+        background-color: #ffa500;
+        border: 5px solid purple;
+        padding: 5px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-row:1/7;
+        -ms-grid-row:1/7;
+        grid-column:1/6;
+        -ms-grid-column:1/6;
+        }
+        /* here i styled my second grid item I thought this layout was fun and modern looking which also not grabbing the attention form the actual site. i made the background color green
+        and the border around it solid 5px and orange which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes and made the text white for contrast*/
+    .grid-item2 {
+        background-color: #004700;
+        border: 5px solid orange;
+        padding: 5px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-row:1/6;
+        -ms-grid-row:1/6;
+        grid-column:6/12;
+        -ms-grid-column:6/12;
+        color:white;
+        }
+        /* here i styled my third grid item I thought this layout was fun and modern looking which also not grabbing the attention form the actual site. i made the background color purple
+        and the border around it solid 5px and green which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes and made the text white for contrast */
+    .grid-item3 {
+        background-color: #800080;
+        border: 5px solid #004700;
+        padding: 5px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-row:6/14;
+        -ms-grid-row:6/14;
+        grid-column:6/12;
+        -ms-grid-column:6/12;
+        color:white;
+        }
+        /* here i styled my fourth grid item I thought this layout was fun and modern looking which also not grabbing the attention form the actual site. i made the background color green
+        and the border around it solid 5px and purple which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes and made the text white for contrast*/
+    .grid-item4 {
+        background-color: #004700;
+        border: 5px solid purple;
+        padding: 5px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-row:7/14;
+        -ms-grid-row:7/14;
+        grid-column:1/6;
+        -ms-grid-column:1/6;
+        color:white;
+        }
+        /* here i styled my fifth grid item I thought this layout was fun and modern looking which also not grabbing the attention form the actual site. i made the background color orange
+        and the border around it solid 5px and green which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes */
+    .grid-item5 {
+        background-color: orange;
+        border: 5px solid #004700;
+        padding: 20px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-row: 14/15;
+        -ms-grid-row: 14/15;
+        grid-column:1/12;
+        -ms-grid-column:1/12;
+        position:relative;
+        font-weight:bold;
+        text-align:center;
+        padding-top:35px;
+        } 
+        /* here i styled my sixth grid item I thought this layout was fun and modern looking which also not grabbing the attention form the actual site. i made the background color purple
+        and the border around it solid 5px and orange which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes and made the text white for contrast*/
+    .grid-item6 {
+        background-color: purple;
+        border: 5px solid orange;
+        padding: 20px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-row:15/21;
+        -ms-grid-row:15/21;
+        grid-column:1/8;
+        -ms-grid-column:1/8;
+        color:white;
+        }
+        /* here i styled my seventh grid item I thought this layout was fun and modern looking which also not grabbing the attention form the actual site. i made the background color orange
+        and the border around it solid 5px and purple which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes left the color black as orange and white dont have good contrast*/
+    .grid-item7 {
+        background-color: orange;
+        border: 5px solid purple;
+        padding: 20px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-row:15/21;
+        -ms-grid-row:15/21;
+        grid-column:8/12;
+        -ms-grid-column:8/12;
+        color:black;
+        }
+        /* i made the h2 of the div be aligned to the center of the div */
+        div>h2{
+            text-align:center;
+        }
+        /* i gave this class to images on orange background this made the border color black and solid 5px wide. and then i added a margin of 10all around and then 35 to the left side 
+        so they would not stick to eachother */
+        .dark-img{
+            margin:10px 20px 10px 10px;
+            border:solid black 5px;
+        }
+        /* this is the same as the last one but for images on a green or purple background */
+        .light-img{
+            border:solid white 5px;
+            margin:10px 20px 10px 10px;
+        }
+        /* this made the prargraph of item 5 larger but not larger than the h6 tag because i needed it to pop as it is a quote */
+        #paragraph{
+            font-size:2rem;
+        }
+        /* there was one image acting funny so i had to seperate it and fix it alone sme border but the margin on the right is now 70 not 35 */
+        #single-img{
+            border:solid white 5px;
+            margin:10px 20px 10px 10px;
+        }
+</style>
+</head>
+<body>
+    <!-- this is my header and nav bar all together in one div to make like a top heading  -->
+    <div id="heading-nav">
+        <header> 
+            <h1> Welcome to Naawi-Oodena! </h1>
+        </header>
+        <nav>
+            <ul> 
+                <li class="nav-link"> <a tabindex="1" class="nav-link" href="index.html"> About Naawi-Oodena</a></li>
+                <li class="nav-link"> <a tabindex="2" class="nav-link" href="second-page.html"> Our History </a></li>
+                <li class="nav-link"> <a tabindex="3" class="nav-link" href="contact-us.html"> Contact Us </a></li>
+            </ul>
+        </nav>
+    </div>
+    <br/>
+    <br/>
+    <!-- this is my main information whcih is also in a grid container so the layout is alot nicer -->
+    <main>
+        <div tabindex="4" class="grid-container">
+            <!--this div section explain the residence of naawi-oodena and shows an example of both medium and lower density residentials  -->
+            <div tabindex="5" class="grid-item1">
+                <h2>Residence </h2>
+                <h6> <i>Our two main types of residence are low and medium density residentials. </i></h6>
+                <h4> Lower desity residential:  </h4>
+                <p>We have 6 portions of land dedicated to lower density residentials which include Single-detached and semi-detached dwellings, Townhouse and stacked townhouse 
+                    dwellings, Small plex-type multi-unit residential uses, and Secondary suites. (seen on the left)</p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                <figure>
+                    <img tabindex="6" class="dark-img" src="images/low-density-residential.jpg"  alt="AI generated image of a low density multiplex townhome" height="215px" width="215px">
+                    <img tabindex="7" class="dark-img" src="images/medium-density-residential.jpg" alt="AI generated image of a medium density stacked townhouse apartment" height="215px" width="215px">
+                    <figcaption> examples of both medium and low density residential houses such as townhomes and stacked townhomes</figcaption>
+                </figure>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h4> Medium density residential: </h4>
+                <p> We have 13 portions of land dedicated to medium density residentials which include Low and mid-rise apartments and multi-unit residential buildings, Stacked 
+                    townhomes, Live work units, and Small-scale at-grade convenience commercial uses. (seen on the right)</p>
+            </div> 
+            <!-- this section explains the commercial mixed use areas and what you may find in it such as stores and pharmacies -->
+            <div tabindex="8" class="grid-item2">
+                <h2>Commercial mixed-use </h2>
+                <h6><i>Our commercial mixed-use areas promote a wide range of retails, and service commercial uses, as well as office and major cultural facilities that serve not only
+                    the surrounding residential neighbourhoods, but also the wider city and Treaty 1 communities.</i> </h6>
+                <p> We have 10 areas in Naawi-Oodena designated for Commercial mixed-use these areas offer a diverse range of retail and commercial uses including office, restaurants, 
+                    and personal services, Food stores,  Pharmacies,  Hotels,  Cultural, recreational, and entertainment uses, Public or institutional uses, Gas bars and electric vehicle 
+                    charging stations.</p>
+                <figure>
+                    <img tabindex="9" class="light-img" src="images/pharmacy-grocery-store.jpg" alt="AI generated image of a pharmacy next to a grocery store" height="300px" width="280px">
+                    <img tabindex="10" class="light-img" src="images/cultural-commercial-mix-use.jpg" alt="AI generated image of a cultural commercial mixed use buiding that is mostly glass" height="300px" width="280px">
+                    <figcaption> a pharmacy next to a grocery store and a mixed use cultural building that is build of mostly glass</figcaption>
+                </figure>
+            </div> 
+            <!--  this section talk about the community areas in naawi-oodena and the importance of community itself and connecting with mother nature -->
+            <div tabindex="11" class="grid-item3">
+                <h2> Community spaces </h2>
+                <h6><i> Here in Naawi-Oodena we believe that community is one of the most important things that a strong and connected neighborhood needs. We designate our community spaces 
+                    to honouring mother nature, showcasing Indigenous arts, a structural element of the community but also a recreational amenity.</i></h6>
+                <figure>
+                    <img tabindex="12" class="light-img" src="images/abstract-art-showcase.jpg" alt="AI generated image of an art shocase with naturely aspects" height="300px" width="280px">
+                    <img tabindex="13" class="light-img" src="images/mother-nature-community-space.jpg" alt="AI generated image of a community space that showcases mother nature" height="300px" width="280px">
+                    <figcaption> and art showcase with a bench table and an outdoor community space with trees</figcaption>
+                </figure>
+                <p> we have 4 allotted spaces for community use. These areas include things such as open nature spaces that host picnics, cultural preformances, practices, and group
+                    meetups. We hope for year  round use of community areas which can be difficult with the unpredictable weather of Winnipeg. But, year round indoor areas can be accessible.
+                    We have seasonal outdoor options such as skating in the frozen natural pond, tobbagoning and more!</p>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <figure>
+                        <img tabindex="14" class="light-img" src="images/ice-skating-pond-community.jpg" alt="AI generated image of a frozen natural pond with surrounding trees, people, and houses peaking in" height="400px" width="660px"> 
+                        <figcaption> an outdoor pond that is frozen with surrounding medium density housing and trees with people</figcaption>
+                    </figure>
+            </div> 
+            <!-- this part of my website talks about the mixed use village which is mainly a village with little car not gas stations or drive throughs only real and on hand experiences
+            here! get off your phone and enjoy  -->
+            <div tabindex="15" class="grid-item4">
+                <h2> Mixed-use Village </h2>
+                <h6><i> The mixed-use village has many purposes such as higher density residence, retail, service commercial, active-use and pedestrian-friendly village.</i></h6>
+                <p> This area does not allow for drive through restaraunts or gas stations as it is focused on physical and undistracted use. This is a great place to visit with family and
+                    friends to hang out and indulge in fun activities. </p>
+                <figure>
+                    <img tabindex="16" class="light-img" src="images/mix-use-village.jpg" alt="AI gnerated image of a outdoorsy village with restaraunts and trees" height="560px" width="520px"> 
+                    <figcaption> an outdoorsy mixed usae village with restaurants and more</figcaption>
+                </figure>
+                <p> Our mixed use village includes many exciting activities, some of our favourites are the cafes and bakeries where you can try our local housemade bannok with
+                    handmade and picked jam or pie. Local boutiques all around as well as hotels, barber shops and hair salons. We also advise you to visit our in village cultural 
+                    sights like The Powwow Arbour. 
+                </p>
+            </div> 
+            <!-- this is a quote from the Naawi-oodena master plan and i thought that it was meaningufl and important to include it here -->
+            <div tabindex="17" class="grid-item5"> 
+                <p id="paragraph">"Naawi-Oodena is a bold, visionary, and inclusive new community that reflects Indigenous values, celebrates culture and identity, and welcomes all."</p>
+            </div> 
+            <!-- this section talks about the sports and recreation going on in naawi-oodena can you imagine skating on a natural pond? -->
+            <div tabindex="18" class="grid-item6">
+            <h2> Sports and Recreation </h2>
+            <h6><i>Sports and recreation promotes community and our cultural and recreational facilities. This area contribute to overall community health, unity, and well being. This allows for 
+                residents, visitors, and neighbors oppertunities to active and healthy lifestyles and habits.</i></h6>
+            <p> We foster indoor and outdoor recreational facilities, cultural and communal areas, aswell as overall entertainment facilities which include playgrounds, courts, powwow aurbors and more! You  may also find that we have sports and 
+                cultural stores in the area and surrounding it for convenient access.
+            </p>
+            <figure>
+                <img tabindex="19" class="light-img" src="images/outdoor-play-ground.jpg" alt="AI generated image of an outdoor playground with red and green" height="300px" width="300px">
+                <img tabindex="20" id="single-img" src="images/indoor-tennis-court.jpg" alt="AI generated image of an indoor tennis court" height="300px" width="300px">
+                <img tabindex="21" class="light-img" src="images/indigenous-family-dancers.jpg" alt="two indigenous peoples in traditional red preformace dress girl in a jingle dress" height="300px" width="300px">
+                <img tabindex="22" class="light-img" src="images/indoor-playground.jpg" alt="AI generated image of an indoor playground" height="300px" width="300px">
+                <figcaption> outdoor and indoor recreational amenities such as courts, playgrounds, and cultural preformances</figcaption>
+            </figure>
+        </div>
+        <!-- This final section of my grid explains the education, and governence of naawi-oodena who knew that the main governance building is on the same campus as the educational facilities! -->
+        <div tabindex="23" class="grid-item7">
+            <h2> Cultural campus and education </h2>
+            <h6><i>This area promotes an intergrated mix of institutional uses (educational, cultural, and governance facilities) and is home to the centre  of The Treaty One 
+                Nation government and First Nations identity.</i></h6>
+            <figure>
+                <img tabindex="24" class="dark-img" src="images/treaty-one-nation-center.jpg" alt="AI generated image of the treaty one nation governence center brown grey brick building" height="400px" width="370px">
+                <figcaption> treaty one nation governance offices </figcaption>
+            </figure>
+            <p> These two peices of land have a lot to offer, we have museums, libraries, galleries, and preformace spaces. We also have schools and community centers. The Treaty One Nations Governance Office is 
+                also located nearby. This campus shows the unique culture and identity of The Treaty One Nations </p>
+        </div>
+        </div>
+    </main> 
+    <br/>
+    <br/>
+    <!-- this section talks about naawi-oodenas goals and shows unity though land and culturearl techings -->
+    <section>
+        <h6> Naawi-Oodena is committed to builing a tight-knit community within our vibrant, Indigenous led neighborhood / area. Naawi-Oodena showcases Treaty One Nations culture, 
+            values, and traditions while we also welcome surrounding Winnipeggers to come by and visit our community!
+        </h6>
+    </section>
+    <br/>
+    <br/>
+    <!-- this is my footer which holds a copywrite and my sources -->
+    <footer>
+        <div tabindex="25" id="footer">
+            <a tabindex="26" class="footer-link" href="https://treaty1.ca/naawi-oodena/" target="_blank"> more from T1N on Naawi-Oodena </a>
+            <a tabindex="27" class="footer-link" href="https://www.clc-sic.ca/real-estate/naawi-oodena" target="_blank"> more from CLC on Naawi-Oodena</a>
+            <p id="footer-text">Naawi-Oodena complete developement &copy; </p>
+        </div>
+    </footer>
+</body>
+</html>

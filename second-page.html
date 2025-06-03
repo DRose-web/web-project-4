@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+    <style>
+        /* here is where i created my gri container which you dont really see on the final look of the website but it is there to set the grid up properly. first i gave it a display
+        of grid so that way it shows up then i used a prefix to make it accessable on an older browser that doesnt support it. I then added the grid template making 11 rows and 20 columns
+        and used the appropriate prefix for that too. then i just addedd padding to leave some null space between  the edge of the screen and the content. each row took one even space whereas each column took 150px*/ 
+        .cont1{
+            display:grid;
+            display:-ms-grid;
+            -ms-grid-template-columns:repeat(5, 1fr);
+            grid-template-columns:repeat(5, 1fr);
+            grid-template-rows: repeat(7, 150px);
+            -ms-grid-template-rows: repeat(7, 150px);
+            padding:10px;
+        }
+        /* here i styled my first grid item  i made the background color orange
+        and the border around it solid 5px and green which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes */
+        .item1{
+        background-color: #ffa500;
+        border: 5px solid #004700;
+        padding: 5px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-column:1/6;
+        -ms-grid-column:1/6;
+        grid-row:1/3;
+        -ms-grid-row:1/3;
+        color:black;
+        }
+        /* here i styled my second grid item  i made the background color purple
+        and the border around it solid 5px and orange which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes */
+        .item2{
+        background-color: purple;
+        border: 5px solid orange;
+        padding: 5px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-column:1/4;
+        -ms-grid-column:1/4;
+        grid-row:3/8;
+        -ms-grid-row:3/8;
+        color:white;
+        line-height: 5px;
+        }
+        /* here i styled my third grid item  i made the background color green
+        and the border around it solid 5px and purple which made the div look nice. i made the text alignment to the center for appearance to look more proffessional a border radius
+        of 20px to make it look smooth rather than sharp i gave it a padding of 5pixels to keep the distancce from the edge and a margin of 10px so that the grid items dont clash togetheter
+        and then i set the positioning of the div with the proper prefixes */
+        .item3{
+        background-color: #004700;
+        border: 5px solid purple;
+        padding: 5px;
+        text-align: center;
+        margin:10px;
+        border-radius:20px;
+        grid-column:4/6;
+        -ms-grid-column:4/6;
+        grid-row:3/8;
+        -ms-grid-row:3/8;
+        color:white;
+        }
+        /* i needed to change the line height on something because it was looking a bit squished together */
+        #lineheight{
+            line-height:40px;
+        }
+        /* i wanted to make the font size of the links larger so i could see them better and so that they dont get lost in the iframe */
+        .linka{
+            font-size:1.5rem;
+        }
+        /* this is a very important section so i styled it differently but making the background orance and the text black the border also black5px and solid i gave it a border radius to round it
+        and margin and padding for proper spacing */
+        #legal{
+            background-color:orange;
+            color:black;
+            border:black 5px solid;
+            padding:10px;
+            margin:10px;
+            border-radius:20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- this is my nav bar and header in one div making it lie the grand center -->
+        <div id="heading-nav">
+        <header> 
+            <h1> Naawi-Oodena's History </h1>
+        </header>
+        <nav>
+            <ul> 
+                <li class="nav-link"> <a tabindex="1" class="nav-link" href="index.html"> About Naawi-Oodena</a></li>
+                <li class="nav-link"> <a tabindex="2" class="nav-link" href="second-page.html"> Our History </a></li>
+                <li class="nav-link"> <a tabindex="3" class="nav-link" href="contact-us.html"> Contact Us </a></li>
+            </ul>
+        </nav>
+    </div>
+    <br/>
+    <br/>
+    <main> 
+        <div class="cont1">
+            <!-- this items explains what made the naawi-oodena poroject so unique and important for all of us -->
+            <div tabindex="4"  class="item1"> 
+                <h2> What makes Naawi-Oodena unique?</h2>
+                <p>Naawi-Oodena is unique because it is building towards a greater future. The owership of Naawi-Oodena being split between a Winnipeg government company and Treaty
+                    One Nations is defineitly unique approach to this project but it shows unity and peace amongst all people. The land is also meant for many uses and one of them 
+                    being a landmark for all people Indigenous or non-indigenoous. It is meant to breing people together and unify Winnipeg. There are areas meant for teaching about
+                    the culture in T1N and other cultures in Winnipeg. </p>
+            </div>
+            <!-- this part provides the visitor with some videos from the past that can helpo the understand naawi-oodena bettwer -->
+            <div tabindex="5" class="item2"> 
+                <h2 id="lineheight"> some videos from our past to help understand how we came to be </h2>
+                <figure>
+                    <iframe tabindex="6" width="560" height="265" src="https://www.youtube.com/embed/WGqN5MTamP8?si=ADHP6uuTIv0zJn1Z" title="YouTube video player" frameborder="0" allow="accelerometer;
+                    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+                    <br/>
+                    <br/>
+                    <br/>
+                    <!-- here i left the links for the imd=bedded yoiutube videos  -->
+                    <figcation><a tabindex="7" class="linka" href="https://www.youtube.com/watch?v=WGqN5MTamP8" target="_blank"> journey to Naawi-Oodena pt.1</a></figcation>
+                </figure>
+                <figure id="move">
+                    <iframe tabindex="8"  width="560" height="265" src="https://www.youtube.com/embed/kJl7gcuSreE?si=C8eqJo-_J5_2ODw1" title="YouTube video player" frameborder="0" allow="accelerometer; 
+                autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <figcaption><a tabindex="9" class="linka" href="https://www.youtube.com/watch?v=kJl7gcuSreE" target="_blank"> journey to Naawi-Oodena pt.2</a></figcaption>
+                </figure>
+            </div>
+            <!-- this last grid item shares some historical facts about naawi-oodena like the previous milkitary base and what the name stands for -->
+            <div tabindex="10"  class="item3"> 
+                <h2> Some historical facts </h2>
+                <p> The name of the millitary base previously located on the site of Naawi-Oodena was named Kapyong Barracks built between what is now Kenaston Blvd and Grant Ave.
+                    Kapyong barracks was abandoned in 2004 and declared surplus (no longer being used) by The Canadian Forces, However it was only on August 30th, 2019 when the
+                    federal government officially announced the closure of Kapyong barracks. 
+                </p>
+                <h4> Did you know that Naawi-Oodena is the largest multi-use project so far? It is also the single most largest strategically located urban Indigenous economic zone
+                    in the entire country of Canada.
+                </h4>
+                <p> The name Naawi-Oodena stand for “center of the heart and community” in the Anishinaabe language. Which is exactly what we invisioned and exactly what came 
+                    out as the final producat of this developemental project of historical land.
+                </p>
+            </div>
+        </div>
+    </main>
+    <section> 
+        <!-- this section explains the legal war that waas faced to gain ownership of naawi-oodena and its significance of the agreement -->
+        <div tabindex="11" id="legal"> 
+            <h2> The legal battle for Naawi-Oodena </h2>
+            <p> In 2004 The Federal Treasury Board tried to sell the land to a Crown corporation which was challenged in court by T1N (Treaty 1 Nations) claiming outstanding
+                Treaty land entitlement claims meant they had a right to the site. Only in 2019 T1N signed an agreement with the federal government on land allocation T1N gets 
+                68% while Canada Lands get 32%. It took about 15 years to sign an agreement for the land. </p>
+            <h3> Why was this significant? </h3>
+            <p> An agreement between the federal government and T1N represents a major step towards reconciliation and recognition of indigenous rights. The legal battle set 
+                a standard for future negotiations and land claims via treaty rights. </p>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <!-- this is my footer containing my sources and my copywrite -->
+    <footer>
+        <div tabindex="12"  id="footer">
+            <a tabindex="13" class="footer-link" href="https://treaty1.ca/naawi-oodena/" target="_blank"> more from T1N on Naawi-Oodena </a>
+            <a tabindex="14" class="footer-link" href="https://www.clc-sic.ca/real-estate/naawi-oodena" target="_blank"> more from CLC on Naawi-Oodena</a>
+            <p id="footer-text">Naawi-Oodena complete developement &copy; </p>
+        </div>
+    </footer>
+</body>
+</html>

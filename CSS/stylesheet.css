@@ -1,0 +1,172 @@
+/*I chose to have a triadic color shceme which includes the color purple as my primary as it catches the eye and excentuates certain features of the website like the nav bar. My two
+secondary / accent colors are green and orange green shows a connection to the land while also being the most dark and calm color on the website, orange on the other hand is bright
+joyful and when layerd with the other two colors it serves not only good contrast but also it makes certain items pop like the buttons on my nav bar. my two neutrals are black and white; 
+the white is used for backgrounds, null space, and used on darker backgrounds as a text color to improve visabilitiy and contrast, black is used for texts, outlines, and serves grest 
+contrast in areas when it is needed. */
+#heading-nav{
+    /* this section will be purple with some white text, the other items in this section where not placed how i would want them to be so i used flexbox to move them. Now the items in this 
+    container should be evenly spaced around the container itself, and located in one line along the center of the y axis. I used the required prefixes to make this accessable 
+    across all platforms and them i added a black border to make the purple pop out as much as possible. i made the morders edges rounder by 60px and i added padding so the inside 
+    contents wont stick to the border edge.*/
+    Background-color:#800080;
+    color:white;
+    padding:20px;
+    border-radius:60px;
+    display:flex;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    justify-content:space-evenly;
+    -webkit-justify-content:space-evenly;
+    -ms-flex-pack:distribute; 
+    border: solid black 8px;
+    align-items:center;
+    -ms-flex-align:center;
+    -webkit-align-items:center;
+    overflow:wrap;
+}
+/* https://css-tricks.com/forums/topic/flexbox-prefixes/  https://caniuse.com/?search=flexbox use these two to check comp and prefixes*/
+.nav-link{
+    /* this section is the buttons of the nav bar itself the background color of the buttons is orange and the text color originally(beforre being visited) is purple i used text decoration to 
+    remove the line underneath the link, i made the font weight bold so that the words stood out more and i increase the fontsize to make it even more poppy and come out of the crowd in a way
+    i madde the border radius 20px as it was a smaller container if i put it at 60 it might  have turned into an oval. I put padding so that there was 10 pixels of space all around betweeen the
+    border and link of the nav bar. I oputt margin so that the buttons themselves would stay far enough apart from eachother to make it liike nicer and more readable.  */
+    background-color:orange;
+    color:purple;
+    text-decoration:none;
+    padding:10px;
+    margin:2px 8px 2px 8px;
+    font-weight:bold;
+    border-radius:20px;
+    font-size:1.5rem;
+}
+body{
+    /* I set the backgroundcolor to white as that is one of the neutrals i chose and wanted there to be very clear contrast between the grid items and the null space. i set the color 
+    to black which is classic with the white as your default colors because it provides good contrast and easy readability. i made the font family sans serif to make the website look more modern and 
+    appealing to all years of age. i made the overflow setting (incase all the information didnt fit all in the same container) the scroll so that if there were to be overflow 
+    you can just scroll down the contianer. and i used a prefix on that too for older versions of a browser on ios safari, ios chrome, and samsung internet on samsund devices. */
+    background-color:white;
+    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    overflow:scroll;  
+    -webkit-overflow-scrolling:touch;    
+}
+li{
+    /* i made the display of the list items which is the nav bar inslide so that they were going side to side not up and down */
+    display:inline-block;
+}
+.nav-link :hover{
+    /* since I gave my <a> tags a direct class i just used the class for the features as i didnt know if i was going to want to style my a tags for a different reason this 
+    makes it so that when you hoveer over the link the background color will  be puurple not orange and the text color will be orange and then all of that will also have a broder 
+    that is solid black and 4pixels wide.This is so you can tell when you are hovering over the items of the nav bar */
+    color:orange;
+    border:black 4px solid;
+    background-color:purple;
+}
+.nav-link :focus{
+    /* since I gave my <a> tags a direct class i just used the class for the features as i didnt know if i was going to want to style my a tags for a different reason this 
+    makes it so that when you hoveer over the link the background color will  be puurple not orange and the text color will be orange and then all of that will also have a broder 
+    that is solid black and 4pixels wide.This is so you can tell when you are hovering over the items of the nav bar */
+    color:orange;
+    border:black 4px solid;
+    background-color:purple;
+}
+.nav-link :visited{
+    /* I made it so that if you have already visited this website the color of the text will no longer be purple it will be black */
+    color:black; 
+} 
+#footer{
+    /* now onto the footer of the website to match the header and nav bar I made the background color purple and ther text color white i gave it a border that is also black solid and 
+    5pixels wide. i gave it a padding of 20 so that way it stays rather in the middle of the container and a border radius of 60pixels to match with the nav and make it less sharp and attacking */
+    Background-color:#800080;
+    color:white;
+    padding:20px;
+    border-radius:60px;
+    border: black solid 8px;
+}
+.footer-link{
+    /* I made the link color be orange for contrast but also refering to the top header and nav which as the same. i made the text alignment be located at the center of said contain
+    er and then i added margin so that the two links would stay a reasonable amount away from eachother and i gave the links a font size of 1.5 rem or about 24 pixels */
+    text-align: center;
+    color:#ffa500;
+    margin: 1px 5px 1px 60px;
+    font-size:1.5rem;
+}
+#footer-text{
+    /* The paragraph tage is usually a block element but i gave it the display of inline so that way to woudld sit in the same line as the teo links in the footer i also gave the
+    text a margin and quite a large amaount on the leftt side so that it would be far awway from the two links  */
+    margin:8px 8px 8px 400px;
+    display:inline;
+}
+html{
+    /* I set the default font size to 62.5% which is common typography practice */
+    font-size:62.5%;
+}
+p{
+    /* i made the font of the paragrph tag 1.5625 rem which is the smallest of actual text that is on my website. next i changed the line height to 30 the space betweeen each letter
+    to be 2px and the space between each word to be 3px this improves readablilty and overall look of the website. */
+    font-size:1.5625rem;
+    word-spacing:3px;
+    line-height:30px;
+    letter-spacing:2px;
+}
+h1{
+    /* here i set the font to be different than anything else (serif font) to make it stand out as there is only one h1 tag per page which is important for it to be ackgnowledged
+    i also made the font much larger as it should be the biggest form of text amongst my website. the line height and letter spacing are the same from the rest of the headings for 
+    the page to have a proper amount of spacing throughout (it made reading everything easier and faster) */
+    font-size:3.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    word-spacing:3px;
+    line-height:30px;
+    letter-spacing:2px;
+}
+h2{
+    /* i made the font size smaller as this is a smaller heading than the one above and i made the font family back to the same as it was for all of the text because it is not as 
+    important and i want it to have a smooth blend in not stick out like a sore thumb. i made the line-height 30px, space between letters 2px and space between words 3px all to 
+    improve readability and make it easier on the eye */
+    font-size:3.25rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing:3px;
+    line-height:30px;
+    letter-spacing:2px;
+}
+h3{
+    /* i made the font size smaller as this is a smaller heading than the one above and i made the font family back to the same as it was for all of the text because it is not as 
+    important and i want it to have a smooth blend in not stick out like a sore thumb. i made the line-height 30px, space between letters 2px and space between words 3px all to 
+    improve readability and make it easier on the eye */
+    font-size:3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing:3px;
+    line-height:30px;
+    letter-spacing:2px;
+}
+h4{
+    /* i made the font size smaller as this is a smaller heading than the one above and i made the font family back to the same as it was for all of the text because it is not as 
+    important and i want it to have a smooth blend in not stick out like a sore thumb. i made the line-height 30px, space between letters 2px and space between words 3px all to 
+    improve readability and make it easier on the eye */
+    font-size:2.75rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing:3px;
+    line-height:30px;
+    letter-spacing:2px;
+}
+h5{
+    /* i made the font size smaller as this is a smaller heading than the one above and i made the font family back to the same as it was for all of the text because it is not as 
+    important and i want it to have a smooth blend in not stick out like a sore thumb. i made the line-height 30px, space between letters 2px and space between words 3px all to 
+    improve readability and make it easier on the eye */
+    font-size:2.5rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing:3px;
+    line-height:30px;
+    letter-spacing:2px;
+}
+h6{
+    /* i made the font size smaller as this is a smaller heading than the one above and i made the font family back to the same as it was for all of the text because it is not as 
+    important and i want it to have a smooth blend in not stick out like a sore thumb. i made the line-height 30px, space between letters 2px and space between words 3px all to 
+    improve readability and make it easier on the eye */
+    font-size:2.25rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing:3px;
+    line-height:30px;
+    letter-spacing:2px;
+}
+
